@@ -1,0 +1,228 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Debts Section */
+.debts-section {
+  flex: 0.6;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.debts-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Updated Debt Item Styles */
+.debt-item {
+    background-color: #bcc2c9; /* Light gray background */
+    border: 1px solid #dee2e6; /* Soft border for structure */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Add padding for breathing space */
+    margin-bottom: 10px; /* Space between each debt item */
+    font-size: 1rem; /* Standardize font size */
+    display: flex; /* Flexbox for aligning content */
+    justify-content: space-between; /* Space between debt name and amount */
+    align-items: center; /* Vertically center content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+/* Debt Name Styling */
+.debt-name {
+    font-weight: 500; /* Slightly bold for emphasis */
+    color: #333; /* Darker color for visibility */
+}
+
+
+/* Debt Amount Styling */
+.debt-amount {
+    font-weight: 700; /* Bolder to emphasize the amount */
+    color: #28a745; /* Use green for positive amounts */
+}
+
+
+/* New Debt Section */
+.new-debt-section {
+  flex: 0.35;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.new-debt-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Context Menu Styles */
+.context-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 150px;
+  font-size: 1rem;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.context-menu li:last-child {
+  border-bottom: none;
+}
+
+.context-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Debts Section */
+.debts-section {
+  flex: 0.6;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  max-height: 400px; /* Set a max-height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+/* Power Button Styles */
+.power-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.power-button:hover {
+  background-color: #c82333;
+}
+/* Debt Item Hover Effect */
+.debt-item:hover {
+  background-color: #0080ff46; /* Change background color on hover */
+  cursor: pointer; /* Change the cursor to pointer to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+/* Hover effect for a sharper, clickable look */
+.debt-item:hover {
+    transform: translateY(-3px); /* Lift the button slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    background-color: #0000002f; /* Slightly darker background on hover */
+    cursor: pointer; /* Indicate that it is clickable */
+}
+/* Debt Date Styling */
+.debt-date {
+    font-weight: 400;
+    color: #6c757d; /* Neutral gray for less important info */
+}
+.debt-item span {
+    margin-right: 10px; /* Space between each element */
+}

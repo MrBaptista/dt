@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Debt Manager</h1>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Debts Section -->
+            <div class="debts-section">
+                <h2>Debts</h2>
+                <!-- Future dynamically added debts will appear here -->
+            </div>
+
+            <!-- New Debt Form -->
+            <div class="new-debt-section">
+                <h2>New Debt</h2>
+                <form id="debtForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter name">
+
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount">
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+
+                    <button type="submit" id="saveBtn">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context Menu for Debt Items -->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="makePayment">Make Payment</li>
+            <li id="generateInvoice">Generate Invoice</li>
+            <li id="void">Void</li>
+        </ul>
+    </div>
+    
+    <div id="powerButton" class="power-button">Power</div>
+
+    <script src="contextMenu.js"></script>
+    <script src="debtSave.js"></script>
+    <script src="pwrbtn.js"></script>
+    <script src="pay.js"></script>
+</body>
+</html>
